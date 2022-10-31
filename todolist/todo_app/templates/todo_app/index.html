@@ -1,0 +1,17 @@
+<!-- extending base.html -->
+{% extends './base.html' %}
+{% load static %}
+
+{% block banner_slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'todo_app/images/b4.jpg' %}" width="1910px" height="500px" class="d-block w-100" alt="...">
+    </div>
+    </div>
+  </div>
+{% endblock banner_slider %}
+
+{% block main-content %}
+
+{% endblock main-content %}

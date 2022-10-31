@@ -1,0 +1,23 @@
+<!-- extending base.html -->
+{% extends './base.html' %}
+{% load static %}
+
+{% block main-content %}
+<h1> Welcome to do List </h1>
+
+<div class="container">
+    {% comment %} <h1><a href="{% url 'list.index' %}" class="btn btn-primary">Back</a></h1> {% endcomment %}
+    <div class="card">
+        <div class="card-header">
+            <h1>To-List Details</h1>
+        </div>
+        <div class="card-body">
+            <h2>{{ list.title }}</h2>
+            <h2>{{ list.category }}</h2>
+            <h2>{{ list.description }}</h2>
+            <h2>{{ list.post_date }}</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}

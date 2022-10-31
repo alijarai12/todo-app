@@ -1,0 +1,67 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  background-image: url("todo_app/images/p17.jpg");
+  background-repeat: no-repeat;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.login_page{
+  padding-left: 22px;
+  width: 400px;
+  background: rgba(248, 208, 132, 0.518);
+  /* background: rgb(229 211 162); */
+  color: black;
+  font-size: 20px;
+  font-family: helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 7px;
+ 
+}
+.form{
+  margin-left: 12px;
+}
+.login_page input::placeholder{
+  color: rgb(197, 226, 238);
+}
+.login_page input[type="text"],input[type="password"]{
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+}
+.login_page input[type="submit"]{
+  text-align: center;
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  outline: none;
+  border: 0;
+  border-radius: 15px;
+  background: #d4deea;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login_page span{
+ margin-left: 140px;
+}
+
+.login_page a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  margin-left: 100px;
+}

@@ -1,0 +1,24 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}
+TODO EDIT
+{% endblock title %}
+
+{% block main-content %}
+<div class="container">
+    <h1><a href="{% url 'home' %}" class="btn btn-primary">Back</a></h1>
+    <div class="card">
+        <div class="card-header">
+            <h1>TODO EDIT</h1>
+        </div>
+        <div class="card-body">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input type="submit" value="UPDATE" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

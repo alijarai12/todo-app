@@ -1,0 +1,55 @@
+<!-- extending base.html -->
+{% extends './base.html' %}
+{% load static %}
+
+{% block main-content %}
+<div class="imgcontainer">
+  
+  <img src="{% static 'todo_app/images/n2.jpg' %}" width="100%" height="690px" class="d-block w-100" alt="...">
+  <div class="TL" >
+    <br>
+    <br>
+    <h1 style = 'color: white;'> Welcome to do List </h1>
+
+    {% comment %} <h1><a href="{% url 'list.index' %}" class="btn btn-primary">Back</a></h1> {% endcomment %}
+    <div class="card">
+        <div class="card-header">
+            <h1>To-List Details
+            </h1>
+            <hr>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Complete</th>
+                    <th scope="col" colspan="3">Action</th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                {% for l in lists %}    
+                  <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ l.title }}</td>
+                    <td>{{ l.description }}</td>
+                    <td>{{ l.date }}</td>
+                    <td>{{ l.complete }}</td>
+                    <td><a href="{% url 'edit' l.id %}">Edit</a></td>
+                    <td><a href="{% url 'delete' l.id %}">Delete</a></td>
+
+                  </tr>
+                {% endfor %}
+  
+                </tbody>
+              </table>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock main-content %}
